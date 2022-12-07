@@ -13,5 +13,4 @@ Painless 提供了圍繞以下核心原則的眾多功能：
 
 準備好開始使用 Painless 編寫腳本了嗎？ 了解如何 [編寫您的第一個腳本](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-using.html)。
 
-If you’re already familiar with Painless, see the Painless Language Specification for a detailed description of the Painless syntax and language features.
 如果您已經熟悉 Painless，請參閱 [Painless 語言規範](https://www.elastic.co/guide/en/elasticsearch/painless/8.5/painless-lang-spec.html) 以獲取有關 Painless 語法和語言功能的詳細說明。
