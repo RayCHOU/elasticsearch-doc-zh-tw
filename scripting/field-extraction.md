@@ -244,3 +244,101 @@ POST /my-index/_bulk?refresh
 ```javascript
 emit("used" + ' ' + gc.usize + ', ' + "capacity" + ' ' + gc.csize + ', ' + "committed" + ' ' + gc.comsize)
 ```
+
+綜合起來，您可以在 search request 中創建一個名為 `gc_size` 的 runtime field。  
+使用 [`fields` 選項](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-fields.html#search-fields-param)，您可以檢索 `gc_size` runtime field 的所有值。  
+此查詢還包括用於對數據進行分組的 bucket aggregation。
+
+```
+GET my-index/_search
+{
+  "runtime_mappings": {
+    "gc_size": {
+      "type": "keyword",
+      "script": """
+        Map gc=dissect('[%{@timestamp}][%{code}][%{desc}]  %{ident} used %{usize}, capacity %{csize}, committed %{comsize}, reserved %{rsize}').extract(doc["gc.keyword"].value);
+        if (gc != null) emit("used" + ' ' + gc.usize + ', ' + "capacity" + ' ' + gc.csize + ', ' + "committed" + ' ' + gc.comsize);
+      """
+    }
+  },
+  "size": 1,
+  "aggs": {
+    "sizes": {
+      "terms": {
+        "field": "gc_size",
+        "size": 10
+      }
+    }
+  },
+  "fields" : ["gc_size"]
+}
+```
+
+response 包括來自 `gc_size` field 的數據，其格式與您在 dissect pattern 中定義的完全相同！
+
+```json
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 6,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "my-index",
+        "_id" : "GXx3H3kBKGE42WRNlddJ",
+        "_score" : 1.0,
+        "_source" : {
+          "gc" : "[2021-04-27T16:16:34.699+0000][82460][gc,heap,exit]   class space    used 266K, capacity 384K, committed 384K, reserved 1048576K"
+        },
+        "fields" : {
+          "gc_size" : [
+            "used 266K, capacity 384K, committed 384K"
+          ]
+        }
+      }
+    ]
+  },
+  "aggregations" : {
+    "sizes" : {
+      "doc_count_error_upper_bound" : 0,
+      "sum_other_doc_count" : 0,
+      "buckets" : [
+        {
+          "key" : "used 107719K, capacity 111775K, committed 112724K",
+          "doc_count" : 1
+        },
+        {
+          "key" : "used 115409K, capacity 119541K, committed 120248K",
+          "doc_count" : 1
+        },
+        {
+          "key" : "used 14503K, capacity 15894K, committed 15948K",
+          "doc_count" : 1
+        },
+        {
+          "key" : "used 15255K, capacity 16726K, committed 16844K",
+          "doc_count" : 1
+        },
+        {
+          "key" : "used 266K, capacity 367K, committed 384K",
+          "doc_count" : 1
+        },
+        {
+          "key" : "used 266K, capacity 384K, committed 384K",
+          "doc_count" : 1
+        }
+      ]
+    }
+  }
+}
+```
