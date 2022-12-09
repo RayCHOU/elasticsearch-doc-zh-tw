@@ -100,3 +100,37 @@ Date fields are treated as the number of milliseconds since January 1, 1970 and 
 | `doc['field_name'].date.year` | 年 (-292000000 - 292000000) |
 | `doc['field_name'].date.yearOfCentury` | 世紀之中的第幾年 (1-100) |
 | `doc['field_name'].date.yearOfEra` | 紀元(era) 之中的第幾年 (1-292000000) |
+
+The following example shows the difference in years between the `date` fields date0 and date1:
+
+以下示例顯示 `date` field date0 和 date1 之間的年份差異：
+
+    doc['date1'].date.year - doc['date0'].date.year
+
+## `geo_point` field API
+
+| Expression | Description |
+| ---------- | ----------- |
+| `doc['field_name'].empty` | 一個 boolean 值，指示該 field 在 doc 中是否沒有值。 |
+| `doc['field_name'].lat` | 地理點的緯度。 | 
+| `doc['field_name'].lon` | 地理點的經度。 | 
+
+以下示例計算距華盛頓特區的距離（以公里為單位）：
+
+    haversin(38.9072, 77.0369, doc['field_name'].lat, doc['field_name'].lon)
+
+In this example the coordinates could have been passed as parameters to the script, e.g. based on geolocation of the user.
+
+在這個例子中，坐標可以作為參數傳遞給腳本，例如 基於用戶的地理位置。
+
+## Limitations
+
+There are a few limitations relative to other script languages:
+
+* Only numeric, boolean, date, and geo_point fields may be accessed
+* Stored fields are not available
+
+相對於其他腳本語言有一些限制：
+
+* 只能訪問 數字、布爾值、日期和 geo_point field
+* stored fields 不可用
