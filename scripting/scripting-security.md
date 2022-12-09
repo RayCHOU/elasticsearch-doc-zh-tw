@@ -21,3 +21,22 @@ Elasticsearch 支持兩種腳本類型：`inline` 和 `stored`。
 默認情況下，Elasticsearch 配置為運行這兩種類型的腳本。  
 要限制運行的腳本類型，請將 `script.allowed_types` 設置為 `inline` 或 `stored`。  
 要阻止任何腳本運行，請將 `script.allowed_types` 設置為 `none`。
+
+重要：如果您使用 Kibana，請將 `script.allowed_types` 設置為 `both` 或 `inline`。  
+某些 Kibana 功能依賴於 inline scripts，如果 Elasticsearch 不允許 inline scripts，則無法按預期運行。
+
+例如，要運行 inline scripts 但是不要 stored scripts：
+
+```
+script.allowed_types: inline
+```
+
+## Allowed script contexts setting
+
+默認情況下，允許所有 script contexts。  
+使用 `script.allowed_contexts` 設置指定允許的 contexts。  
+要指定不允許任何 contexts，請將 `script.allowed_contexts` 設置為 `none`。
+
+例如，允許 scripts 僅在 `scoring` 和 `update` contexts 中運行：
+
+    script.allowed_contexts: score, update
