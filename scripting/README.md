@@ -28,3 +28,4 @@ Painless 專為 Elasticsearch 構建，可用於腳本 API 中的任何目的，
 * [Accessing document fields and special variables](scripting-fields.md)
 * [Scripting and security](scripting-security.md)
 * [Lucene expressions language](scripting-expression.md)
+* [Advanced scripts using script engines](scripting-engine.md)
