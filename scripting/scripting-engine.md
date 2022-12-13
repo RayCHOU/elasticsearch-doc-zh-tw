@@ -159,7 +159,7 @@ private static class MyExpertScriptEngine implements ScriptEngine {
 }
 ```
 
-You can execute the script by specifying its lang as expert_scripts, and the name of the script as the script source:
+You can execute the script by specifying its `lang` as `expert_scripts`, and the name of the script as the script source:
 
 您可以通過將其 `lang` 指定為 `expert_scripts` 並將腳本名稱指定為腳本源來執行腳本：
 
