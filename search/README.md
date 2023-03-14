@@ -20,3 +20,4 @@ Search 還可能包含用於更好地處理它的 queries 的附加信息。
 ## 本小節中包含
 
 * [Run a search](run-a-search.md)
+* [定義只在 query 中存在的 fields](define-runtime-fields.md)
