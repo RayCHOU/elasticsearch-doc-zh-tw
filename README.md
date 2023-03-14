@@ -8,5 +8,6 @@ From [Elasticsearch Guide 8.6](https://www.elastic.co/guide/en/elasticsearch/ref
 * [Index Modules](index)
 * [Mapping](mapping)
 * [Text analysis](analysis)
+* [Index templates](index-templates)
 * [Scripting](scription)
 * [REST APIs](resp-apis)
