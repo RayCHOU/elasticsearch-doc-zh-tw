@@ -5,6 +5,19 @@ Index Modules 是為每個索引創建的模塊，並控制與索引相關的所
 * [Index Settings](#index-settings)
   * [靜態 index settings](#static-index-settings)
   * [動態 index settings](https://www.elastic.co/guide/en/elasticsearch/reference/8.5/index-modules.html#dynamic-index-settings)
+  * [Settings in other index modules](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules.html#_settings_in_other_index_modules)
+    * [Analysis](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis.html) 用於定義 analyzers, tokenizers, token filters 以及 character filters 的 settines。
+    * [Index shard allocation](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-allocation.html) 控制 shards 分配給 nodes 的位置、時間和方式。
+    * [Mapping](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-mapper.html) 啟用或禁用索引的 動態 mapping。
+    * [Merging](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-merge.html) 控制 background merge process 合併 shards 的方式。
+    * [Similarities](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-similarity.html) 配置 custom similarity settings 以自定義搜索結果的評分方式。
+    * [Slowlog](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-slowlog.html) 控制 slow queries 和 fetch requests 的 log 方式。
+    * [Store](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-store.html) 配置用於訪問 shard data 的 filesystem 類型。
+    * [Translog](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-translog.html) 控制 transaction log 和 background flush operations。
+    * [History retention](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-history-retention.html) 控制索引中操作歷史的保留。
+    * [Indexing pressure](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules-indexing-pressure.html) 配置 indexing back pressure 限制。
+  * [X-Pack index settings](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/index-modules.html#x-pack-index-settings)
+    * [Index lifecycle management](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/ilm-settings.html) 指定 索引的 生命週期策略 和 rollover alias。
 
 ## Index Settings
 
