@@ -6,5 +6,6 @@ From [Elasticsearch Guide 8.5](https://www.elastic.co/guide/en/elasticsearch/ref
 * [Setup Elasticsearch](setup)
 * [Upgrade Elasticsearch](upgrade)
 * [Index Modules](index)
+* [Mapping](mapping)
 * [Scripting](scription)
 * [REST APIs](resp-apis)
