@@ -11,5 +11,6 @@ From [Elasticsearch Guide 8.6](https://www.elastic.co/guide/en/elasticsearch/ref
 * [Index templates](index-templates)
 * [Data streams](docs/data-streams.md)
 * [Ingest pipelines](docs/ingest.md)
+* [Aliases](docs/aliases.md)
 * [Scripting](scription)
 * [REST APIs](resp-apis)
