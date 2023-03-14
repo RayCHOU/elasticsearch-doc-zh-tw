@@ -9,5 +9,6 @@ From [Elasticsearch Guide 8.6](https://www.elastic.co/guide/en/elasticsearch/ref
 * [Mapping](mapping)
 * [Text analysis](analysis)
 * [Index templates](index-templates)
+* [Data streams](docs/data-streams.md)
 * [Scripting](scription)
 * [REST APIs](resp-apis)
