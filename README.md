@@ -12,5 +12,6 @@ From [Elasticsearch Guide 8.6](https://www.elastic.co/guide/en/elasticsearch/ref
 * [Data streams](docs/data-streams.md)
 * [Ingest pipelines](docs/ingest.md)
 * [Aliases](docs/aliases.md)
+* [搜索資料](search/README.md) (Search your data)
 * [Scripting](scription)
 * [REST APIs](resp-apis)
