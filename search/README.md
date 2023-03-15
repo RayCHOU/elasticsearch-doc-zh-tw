@@ -23,3 +23,4 @@ Search 還可能包含用於更好地處理它的 queries 的附加信息。
 * [定義只在 query 中存在的 fields](define-runtime-fields.md) (runtime field)
 * [常用搜索選項](common-options.md) 
 * [搜索超時](timeout.md) (timeout)
+* [Search cancellation](cancel.md)
