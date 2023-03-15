@@ -25,3 +25,4 @@ Search 還可能包含用於更好地處理它的 queries 的附加信息。
 * [搜索超時](timeout.md) (timeout)
 * [Search cancellation](cancel.md)
 * [追踪 total hits](total-hits.md) (符合查詢的文件數量)
+* [快速檢查文檔匹配](quick-check.md) (只想知道有沒有任何文件符合查詢)
