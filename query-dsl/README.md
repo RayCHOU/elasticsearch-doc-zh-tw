@@ -58,4 +58,15 @@ Elasticsearch 提供了一個完整的基於 JSON 的 Query DSL（Domain Specifi
 ## 本主題下的子題
 
 * [Query and filter context](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/query-filter-context.html)
-* 
+* [複合查詢](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/compound-queries.html): 將其他複合查詢或葉查詢包在一起
+* [Full text queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/full-text-queries.html) (待譯)
+* [Geo queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/geo-queries.html): 地理查詢
+* [Shape queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/shape-queries.html): 二維形狀查詢
+* [Joining queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/joining-queries.html)
+* [Match all query](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/query-dsl-match-all-query.html): 全部文件都符合
+* [Span queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/span-queries.html)
+* [Specialized queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/specialized-queries.html)
+* [Term-level queries](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/term-level-queries.html)
+* [`minimum_should_match` 參數](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/query-dsl-minimum-should-match.html)
+* [`rewrite` 參數](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/query-dsl-multi-term-rewrite.html)
+* [Regular expression syntax](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/regexp-syntax.html)
