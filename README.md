@@ -14,5 +14,8 @@ From [Elasticsearch Guide 8.6](https://www.elastic.co/guide/en/elasticsearch/ref
 * [Aliases](docs/aliases.md)
 * [搜索資料](search/README.md) (Search your data)
 * [Query DSL](query-dsl/README.md)
+* [Aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/search-aggregations.html)
+* [EQL Search](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/eql.html) (Event Query Language, 例：log)
+* [SQL](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/xpack-sql.html)
 * [Scripting](scription)
 * [REST APIs](resp-apis)
