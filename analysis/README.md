@@ -18,7 +18,7 @@ Elasticsearch 在 索引 或 搜索 [`text`](https://www.elastic.co/guide/en/ela
 
 ## 本小節中包含
 
-* [Overview](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-overview.html)
+* [Overview](overview.md)
 * [Concepts](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-concepts.html)
 * [Configure text analysis](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/configure-text-analysis.html)
 * [Built-in analyzer reference](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-analyzers.html)
