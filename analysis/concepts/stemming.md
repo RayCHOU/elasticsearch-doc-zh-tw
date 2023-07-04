@@ -82,3 +82,29 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/stemming.html#di
   字典詞幹分析器 必須將字典中的所有單詞、前綴和後綴加載到記憶體中。
   這會使用大量 RAM。
   低質量的字典在刪除前綴和後綴方面也可能效率較低，這會顯著減慢詞幹提取過程。
+
+您可以使用 [hunspell](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-hunspell-tokenfilter.html) token filter 來執行 字典詞幹提取。
+
+如果可以的話，我們建議在使用 [hunspell](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-hunspell-tokenfilter.html) token filter 
+之前嘗試適合您的語言的 算法詞幹分析器。
+
+## Control stemming
+
+有時，詞幹提取 會產生 拼寫相似 但概念上不相關的共享詞根。 
+例如，stemmer 可能將 `skies` 和 `skiing` 縮減為相同的詞根：`ski`。
+
+為了防止這種情況並更好地控制 詞幹提取，您可以使用以下 token filters：
+
+* [`stemmer_override`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stemmer-override-tokenfilter.html)，
+  它允許您定義對特定標記進行詞幹處理的規則。
+* [`keyword_marker`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-marker-tokenfilter.html)，
+  將指定 tokeks 標記為 keywords。
+  後續的 stmmer token filters 不會對 keyword tokens 進行詞幹提取。
+* [`conditional`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-condition-tokenfilter.html)，
+  可用於將 tokens 標記為 keywords，類似於 `keywords_marker` 過濾器。
+
+For built-in language analyzers, you also can use the stem_exclusion parameter to specify a list of words that won’t be stemmed.
+
+對於內建的 [language analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html)，
+您還可以使用 [`stem_exclusion`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html#_excluding_words_from_stemming) 
+參數來指定不會被詞幹化的單詞列表。
