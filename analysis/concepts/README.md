@@ -4,5 +4,5 @@
 
 * [Anatomy of an analyzer](analyzer-anatomy.md) (剖析 analyzer)
 * [Index and search analysis](analysis-index-search-time.md) (建索引時的分析 vs. 執行檢索時的分析)
-* Stemming (詞幹提取)
+* [Stemming](stemming.md) (詞幹提取)
 * Token graphs
