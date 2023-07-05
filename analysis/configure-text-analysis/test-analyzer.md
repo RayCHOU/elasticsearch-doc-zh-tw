@@ -4,6 +4,9 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/test-analyzer.ht
 
 [`analyze` API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-analyze.html) 
 是查看 analyzer 生成的 terms 的寶貴工具。 
+
+## Test built-in analyzer
+
 可以在 request 中 inline 指定 built-in analyzer：
 
 Ruby:
@@ -54,6 +57,8 @@ API 回傳以下 response：
   ]
 }
 ```
+
+## Test combinations
 
 您還可以測試以下組合：
 
@@ -118,6 +123,8 @@ API 回傳以下 response：
 還記錄 每個 term 的順序或相對位置（用於 phrase queries 或 word proximity queries），
 以及 每個術語位於原始文本中的起始和結束 character offsets（用於 highlighting search snippets）。 
 
+## Test custom analyzer
+
 或者，在特定索引上運行 analyze API 時可以引用 [`custom` analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-custom-analyzer.html)：
 
 ```HTTP
@@ -126,7 +133,7 @@ PUT my-index-000001
   "settings": {
     "analysis": {
       "analyzer": {
-        "std_folded": { 
+        "std_folded": {  <!-- ❶ 定義一個名為 std_folded 的 custom analyzer。 -->
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
@@ -141,21 +148,21 @@ PUT my-index-000001
     "properties": {
       "my_text": {
         "type": "text",
-        "analyzer": "std_folded" 
+        "analyzer": "std_folded" # ❷ field my_text 使用 std_folded analyzer。
       }
     }
   }
 }
 
-GET my-index-000001/_analyze 
+GET my-index-000001/_analyze  # ❸ 要引用這個 analyzer，analyzer API 必須指定索引名稱。
 {
-  "analyzer": "std_folded", 
+  "analyzer": "std_folded", # ❹ 按名稱引用 analyzer。
   "text":     "Is this déjà vu?"
 }
 
-GET my-index-000001/_analyze 
+GET my-index-000001/_analyze # ❸ 要引用這個 analyzer，analyzer API 必須指定索引名稱。
 {
-  "field": "my_text", 
+  "field": "my_text",  # ❺ 引用 field my_text 使用的分析器。
   "text":  "Is this déjà vu?"
 }
 ```
