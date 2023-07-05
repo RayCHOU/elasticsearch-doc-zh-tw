@@ -20,8 +20,8 @@ Elasticsearch 在 索引 或 搜索 [`text`](https://www.elastic.co/guide/en/ela
 
 * [Overview](overview.md)
 * [Concepts](concepts/README.md)
-* [Configure text analysis](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/configure-text-analysis.html)
-* [Built-in analyzer reference](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-analyzers.html)
+* [Configure text analysis](configure-text-analysis/README.md)
+* [Built-in analyzer reference](analysis-analyzers/README.md)
 * [Tokenizer reference](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-tokenizers.html)
 * [Token filter reference](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-tokenfilters.html)
 * [Character filters reference](https://www.elastic.co/guide/en/elasticsearch/reference/8.6/analysis-charfilters.html)
