@@ -33,7 +33,7 @@ Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可�
 
 Elasticsearch 提供了許多特定語言的分析器，例如 `english` 或 `french`。
 
-[__指紋分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-fingerprint-analyzer.html)
+[__指紋分析器__](fingerprint.md)
 
 `fingerprint` 分析器 是一種專門的分析器，它能創建一個可以用於 重複檢測 的指紋。
 
