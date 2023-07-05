@@ -21,7 +21,7 @@ Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可�
 
 `stop` 分析器 與 `simple` 分析器 類似，但也支持刪除 stop words。
 
-[__關鍵詞分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-analyzer.html)
+[__關鍵詞分析器__](keyword.md)
 
 `keyword` 分析器 是一個 “noop” 分析器，它接受給定的任何文本，並輸出完全相同的文本作為單個 term。
 
