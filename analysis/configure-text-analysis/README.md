@@ -17,5 +17,5 @@ Custom analyzers 涉及選擇和組合不同的 analyzer 組件，使您能夠�
 
 * [測試 analyzer](test-analyzer.md)
 * [配置 built-in analyzers](configuring-analyzers.md)
-* 創建 custom analyzer
+* [創建 custom analyzer](analysis-custom-analyzer.md)
 * 指定 analyzer
