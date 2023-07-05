@@ -16,6 +16,6 @@ Built-in analyzers 不需要配置，但需要一些可用於調整其行為的�
 Custom analyzers 涉及選擇和組合不同的 analyzer 組件，使您能夠更好地控製過程。
 
 * [測試 analyzer](test-analyzer.md)
-* 配置 built-in analyzers
+* [配置 built-in analyzers](configuring-analyzers.md)
 * 創建 custom analyzer
 * 指定 analyzer
