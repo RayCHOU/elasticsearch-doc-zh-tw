@@ -29,7 +29,7 @@ Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可�
 
 `pattern` 分析器 使用 正則表達式 將文本拆分為 terms。 它支持 小寫 和 stop words。
 
-[__語言分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html)
+[__語言分析器__](lang.md)
 
 Elasticsearch 提供了許多特定語言的分析器，例如 `english` 或 `french`。
 
