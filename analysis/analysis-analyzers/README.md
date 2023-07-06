@@ -25,7 +25,7 @@ Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可�
 
 `keyword` 分析器 是一個 “noop” 分析器，它接受給定的任何文本，並輸出完全相同的文本作為單個 term。
 
-[__模式分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-pattern-analyzer.html)
+[__模式分析器__](pattern.md)
 
 `pattern` 分析器 使用 正則表達式 將文本拆分為 terms。 它支持 小寫 和 stop words。
 
