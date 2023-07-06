@@ -4,7 +4,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyze
 
 Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可在任何索引中使用：
 
-[__標準分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-analyzer.html)
+[__標準分析器__](standard.md)
 
 `standard` 分析器 會根據 Unicode文本分段演算法 的定義，將文本在 word boundaries 的地方 劃分為多個 terms。
 它刪除了大多數 標點符號、小寫 terms，並支持刪除 stop words。
