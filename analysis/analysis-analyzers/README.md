@@ -17,7 +17,7 @@ Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可�
 
 `whitespace` 析器 遇到任何 空白字符 時，都會將文本分成 terms。 它不會將 terms 轉為小寫。
 
-[__停止分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-analyzer.html)
+[__停止分析器__](stop.md)
 
 `stop` 分析器 與 `simple` 分析器 類似，但也支持刪除 stop words。
 
