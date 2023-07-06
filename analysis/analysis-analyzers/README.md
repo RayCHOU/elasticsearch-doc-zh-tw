@@ -9,7 +9,7 @@ Elasticsearch 附帶了各種 built-in 分析器，無需進一步配置即可�
 `standard` 分析器 會根據 Unicode文本分段演算法 的定義，將文本在 word boundaries 的地方 劃分為多個 terms。
 它刪除了大多數 標點符號、小寫 terms，並支持刪除 stop words。
 
-[__簡單分析器__](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-simple-analyzer.html)
+[__簡單分析器__](simple.md)
 
 `simple` 分析器 只要遇到 非字母的字符，就會將文本分成 terms。 它將所有 terms 都轉小寫。
 
